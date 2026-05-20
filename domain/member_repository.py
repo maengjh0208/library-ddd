@@ -1,5 +1,4 @@
 # MemberRepository 인터페이스
-# BookRepository 인터페이스
 
 
 from abc import ABC, abstractmethod
