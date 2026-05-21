@@ -10,11 +10,11 @@ from domain.isbn import ISBN
 # 추상 클래스
 class BookRepository(ABC):
     @abstractmethod
-    def find_by_isbn(self, isbn: ISBN) -> Book:
+    def find_by_isbn(self, session, isbn: ISBN) -> Book:
         pass
 
     @abstractmethod
-    def save(self, book: Book) -> None:
+    def save(self, session, book: Book) -> None:
         """
         isbn: ISBN, title: str, author: str 이런식으로 필드를 하나씩 받기보다는,
         이미 만들어진 객체(Book)를 받는게 더 자연스럽다.
