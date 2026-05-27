@@ -1,8 +1,6 @@
-"""
-engine  → DB와 연결하는 객체
-session → 실제 쿼리를 실행하는 객체 (트랜잭션 단위)
-Base    → 모든 모델이 상속받는 부모 클래스
-"""
+# engine  → DB와 연결하는 객체
+# session → 실제 쿼리를 실행하는 객체 (트랜잭션 단위)
+# Base    → 모든 모델이 상속받는 부모 클래스
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import DeclarativeBase, sessionmaker

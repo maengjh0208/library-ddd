@@ -1,4 +1,4 @@
-from sqlalchemy import Boolean, Column, Integer, String
+from sqlalchemy import Boolean, Column, Date, ForeignKey, Integer, String
 
 from infrastructure.database import Base
 
@@ -19,3 +19,14 @@ class MemberModel(Base):
     name = Column(String, nullable=False)
     loan_count = Column(Integer, default=0)
     is_overdue = Column(Boolean, default=False)
+
+
+class LoanModel(Base):
+    __tablename__ = "loans"
+
+    loan_id = Column(String, primary_key=True)
+    isbn = Column(String, ForeignKey("books.isbn"), nullable=False)
+    member_id = Column(String, ForeignKey("members.member_id"), nullable=False)
+    loan_date = Column(Date, nullable=False)
+    due_date = Column(Date, nullable=False)
+    is_returned = Column(Boolean, nullable=False, default=False)

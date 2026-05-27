@@ -1,11 +1,9 @@
 from dataclasses import dataclass
 
-"""
-비즈니스 규칙
+# 비즈니스 규칙
 
-1. 최대 3권까지 대출 가능
-2. 연체 중이면 대출 불가
-"""
+# 1. 최대 3권까지 대출 가능
+# 2. 연체 중이면 대출 불가
 
 
 @dataclass
