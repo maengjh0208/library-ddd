@@ -9,7 +9,7 @@ from domain.member.member import Member
 # 추상 클래스
 class MemberRepository(ABC):
     @abstractmethod
-    def find_by_id(self, session, member_id: str) -> Member:
+    def find_by_id(self, session, member_id: str) -> Member | None:
         pass
 
     @abstractmethod
