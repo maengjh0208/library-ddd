@@ -1,8 +1,8 @@
 from sqlalchemy import select
 
-from domain.book import Book
-from domain.book_repository import BookRepository
-from domain.isbn import ISBN
+from domain.book.book import Book
+from domain.book.book_repository import BookRepository
+from domain.book.isbn import ISBN
 from infrastructure.models import BookModel
 
 

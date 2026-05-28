@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from domain.isbn import ISBN
+from domain.book.isbn import ISBN
 
 
 @dataclass

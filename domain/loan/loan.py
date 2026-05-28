@@ -18,8 +18,8 @@
 from dataclasses import dataclass
 from datetime import date, timedelta
 
-from domain.book import Book
-from domain.member import Member
+from domain.book.book import Book
+from domain.member.member import Member
 
 
 @dataclass

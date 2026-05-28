@@ -23,6 +23,21 @@ engine = create_engine(
 session_local = sessionmaker(bind=engine)
 
 
+def get_session():
+    session = session_local()
+
+    try:
+        yield session
+        session.commit()
+    except Exception:
+        session.rollback()
+        # 원래 예외를 그대로 던짐
+        raise
+    finally:
+        # 세션을 커넥션 풀에 반납 (종료가 아님)
+        session.close()
+
+
 # 모든 모델이 상속받을 Base
 class Base(DeclarativeBase):
     # DeclarativeBase 클래스는 DB 테이블과 매핑되는 모델이라는걸 알려주는 부모 클래스

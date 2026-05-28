@@ -1,5 +1,5 @@
-from domain.book import Book
-from domain.member import Member
+from domain.book.book import Book
+from domain.member.member import Member
 
 
 class LoanService:

@@ -3,7 +3,7 @@
 
 from abc import ABC, abstractmethod
 
-from domain.member import Member
+from domain.member.member import Member
 
 
 # 추상 클래스

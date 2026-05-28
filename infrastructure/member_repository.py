@@ -1,7 +1,7 @@
 from sqlalchemy import select
 
-from domain.member import Member
-from domain.member_repository import MemberRepository
+from domain.member.member import Member
+from domain.member.member_repository import MemberRepository
 from infrastructure.models import MemberModel
 
 

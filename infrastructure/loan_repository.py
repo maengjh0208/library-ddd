@@ -1,10 +1,10 @@
 from sqlalchemy import select
 
-from domain.book import Book
-from domain.isbn import ISBN
-from domain.loan import Loan
-from domain.loan_repository import LoanRepository
-from domain.member import Member
+from domain.book.book import Book
+from domain.book.isbn import ISBN
+from domain.loan.loan import Loan
+from domain.loan.loan_repository import LoanRepository
+from domain.member.member import Member
 from infrastructure.models import BookModel, LoanModel, MemberModel
 
 

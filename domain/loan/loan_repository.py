@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from domain.loan import Loan
+from domain.loan.loan import Loan
 
 
 class LoanRepository(ABC):

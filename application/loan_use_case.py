@@ -14,12 +14,12 @@
 import uuid
 from datetime import date
 
-from domain.book_repository import BookRepository
-from domain.isbn import ISBN
-from domain.loan import Loan
-from domain.loan_repository import LoanRepository
-from domain.loan_service import LoanService
-from domain.member_repository import MemberRepository
+from domain.book.book_repository import BookRepository
+from domain.book.isbn import ISBN
+from domain.loan.loan import Loan
+from domain.loan.loan_repository import LoanRepository
+from domain.loan.loan_service import LoanService
+from domain.member.member_repository import MemberRepository
 
 
 class LoanUseCase:
@@ -59,7 +59,9 @@ class LoanUseCase:
         self.member_repository.save(session, member)
         self.loan_repository.save(session, loan)
 
-    def return_book(self, session, loan_id: str):
+        return loan
+
+    def return_book(self, session, loan_id: str) -> None:
         loan = self.loan_repository.find_by_id(session, loan_id)
 
         if not loan:

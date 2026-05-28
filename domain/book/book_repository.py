@@ -3,8 +3,8 @@
 
 from abc import ABC, abstractmethod
 
-from domain.book import Book
-from domain.isbn import ISBN
+from domain.book.book import Book
+from domain.book.isbn import ISBN
 
 
 # 추상 클래스
